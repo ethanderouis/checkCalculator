@@ -1,6 +1,6 @@
-#Check Calculator
+# Check Calculator
 
-##Project Information
+## Project Information
 Creating a little web application that estimates my next paycheck using the information provided by my clock out tabs.
 Federal Tax with-held is something I cannot calculate that is why the app is only use for estimation.
 Although, I did find out that subtracting tip refund allows me to be only 10 dollars off the expected value.
