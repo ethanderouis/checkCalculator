@@ -42,4 +42,27 @@ function payCheckCalculator() {
         
     ).toFixed(2);
 
+
+    // taxes section
+    document.querySelector(".soc").innerHTML = (
+
+        +document.querySelector(".paycheck").innerHTML*0.062
+
+    ).toFixed(2);
+
+    document.querySelector(".med").innerHTML = (
+
+        +document.querySelector(".paycheck").innerHTML*0.0145
+
+    ).toFixed(2);
+
+    // actual section
+    document.querySelector(".actual").innerHTML = (
+
+        +document.querySelector(".paycheck").innerHTML - 
+        +document.querySelector(".soc").innerHTML -
+        +document.querySelector(".med").innerHTML
+
+    );
+
 }
