@@ -9,76 +9,101 @@
 
     <body>
 
-        <h1>My Check Calculator</h1>
+        <header>
+            <h1>My Check Calculator</h1>
 
-        <ul>
-            <a><li>Homepage</li></a>
-            <a><li>Other Projects</li></a>
-            <a><li>About Me</li></a>
-        </ul>
+            <nav>
+                Homepage | Other Projects | About Me
+            </nav>
+        </header>
+        
+        <section id="user-input-section">
 
-        <div class="hours-and-minutes">
-            <div class="hour-mark">
-                <p>How many hours in this shift?</p>
-                <input type="range" id="hours-being-added" name="hours-being-added" min="0" max="16" oninput="this.nextElementSibling.value = this.value">
-                <output>8</output>
-                <label for="hour">Hour</label>
+            <h3>Shift Information To Push</h3>
+
+            <div class="hours-and-minutes">
+                <p>Hours in this shift: </p>
+                <div class="hour-mark">
+                    <input type="range" id="hours-being-added" name="hours-being-added" min="0" max="16" oninput="this.nextElementSibling.value = this.value">
+                    <output>8</output>
+                    <label for="hour">Hour</label>
+                </div>
+    
+                <div class="minute-mark">
+                    <input type="range" id="minutes-being-added" name="minutes-being-added" min="0" max="59" oninput="this.nextElementSibling.value = this.value">
+                    <output>30</output>
+                    <label for="minute">Minute</label>
+                </div>
+                
             </div>
-
-            <div class="minute-mark">
-                <input type="range" id="minutes-being-added" name="minutes-being-added" min="0" max="59" oninput="this.nextElementSibling.value = this.value">
-                <output>30</output>
-                <label for="minute">Minute</label>
+    
+            <div>
+                <label for="shift-sales">Sales for this Shift: </label>
+                <input type="number" name="sales-question" id="sales-being-added" value="0" onclick="this.select();">  
+            </div>
+    
+            <div>
+                <label for="shift-charge-tips">Charge Tips for this Shift: </label>
+                <input type="number" name="charge-tips-question" id="charge-tips-being-added" value="0" onclick="this.select();">  
             </div>
             
-        </div>
+            <div>
+                <label for="shift-tabs">Incentive Tabs for this Shift: </label>
+                <input type="number" name="incentive-tabs-question" id="incentive-tabs-being-added" value="0" onClick="this.select();">  
+            </div>
+    
+            <div>
+                <label for="shift-tip-refund">Tip Refund for this Shift: </label>
+                <input type="number" name="tip-refund-question" id="tip-refund-being-added" value="0" onclick="this.select();">  
+            </div>
+            
+            <button onclick="payCheckCalculator()">PUSH</button>
 
-        <!--TODO: figure out how to display the values of the input-->
+        </section>
 
+        <section id="statistics">
 
+            <h3>Bi-Weekly Work Statistics</h3>
 
+            <p>Total Hours: <span class="total-hours">0.00</span></p>
+            <p>Total Sales: $<span class="total-sales">0.00</span></p>
+            <p>Total Incentive Tabs: $<span class="total-incentive-tabs">0.00</span></p>
+            <p>Total Charge Tips: $<span class="total-charge-tips">0.00</span></p>
+            <p>Tipshare: $<span class="total-tipshare">0.00</span></p>
+            <p>Tip Refund: $<span class="total-tip-refund">0.00</span></p>
 
+        </section>
 
-        <div>
-            <label for="shift-sales">Sales for this Shift: </label>
-            <input type="number" name="sales-question" id="sales-being-added" value="0" onclick="this.select();">  
-        </div>
-        
-        <div>
-            <label for="shift-tabs">Incentive Tabs for this Shift: </label>
-            <input type="number" name="incentive-tabs-question" id="incentive-tabs-being-added" value="0" onClick="this.select();">  
-        </div>
+        <section id="paycheck-information">
 
-        <div>
-            <label for="shift-charge-tips">Charge Tips for this Shift: </label>
-            <input type="number" name="charge-tips-question" id="charge-tips-being-added" value="0" onclick="this.select();">  
-        </div>
+            <h3>Paycheck Information</h3>
 
-        <div>
-            <label for="shift-tip-refund">Tip Refund for this Shift: </label>
-            <input type="number" name="tip-refund-question" id="tip-refund-being-added" value="0" onclick="this.select();">  
-        </div>
-        
-        <button onclick="payCheckCalculator()">CALCULATE</button>
+            <p>Total Dollars: $<span class="paycheck">0</span></p>
 
-        <p>STATISTICS</p>
-        <p>Total Hours: <span class="total-hours">0.00</span></p>
-        <p>Total Sales: $<span class="total-sales">0.00</span></p>
-        <p>Total Incentive Tabs: $<span class="total-incentive-tabs">0.00</span></p>
-        <p>Total Charge Tips: $<span class="total-charge-tips">0.00</span></p>
-        <p>Tipshare: $<span class="total-tipshare">0.00</span></p>
-        <p>Tip Refund: $<span class="total-tip-refund">0.00</span></p>
-        <p>-------------------------</p>
-        <p>PAYCHECK</p>
-        <p class="paycheck">0</p>
+            <h4>Taxes</h4>
 
-        <p>-------------------------</p>
-        <p>TAXES</p>
-        <p>Soc Sec EE: <span class="soc">0</span></p>
-        <p>Med EE: <span class="med">0</span></p>
+                <ul>
+                    <li>Soc Sec EE: <span class="soc">0</span></li>
+                    <li>Med EE: <span class="med">0</span></li>
+                </ul>
 
-        <p>-------------------------</p>
-        <p>ACTUAL</p>
-        <p class="actual">0</p>
+            <p>Expected Amount: $<span class="actual">0</span></p>        
+
+        </section>
+
+        <section id="server-performance-score">
+
+            <h3>Server Score</h3>
+
+            <div id="server-score">
+                <p><span class="grade">--</span></p>
+            </div>
+
+            <div id="gratuity-average">
+                <p>Average Gratuity: <span class="gratuity">0</span>%</p>
+            </div>
+
+        </section>
+
     </body>
 </html>

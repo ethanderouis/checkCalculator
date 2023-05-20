@@ -16,3 +16,16 @@ Everytime the calculate button is pressed, it will added money earned that day t
 Keep in mind that the program only work by updating the page by adding new information. 
 It is not connected to a database so when you refresh the page, the paycheck total goes back to 0 and you would have to re-input everything back again in the page.
 I do not think this is the most efficient yet due to restarting the whole everytime a user messes up, but it is at least functional.<br>
+
+## Different Sections
+### Shift Information
+This section is where the user will input each shift information.
+
+### Bi-weekly Work Statistics 
+This section is the statistics involved in determining how the paycheck information was acquired. Good for checking work by hand.
+
+### Paycheck information
+This section is probably the MOST important section and maybe the reason why this whole application was built. It displays the predicted paycheck amount for the next pay period.
+
+### Server Score
+This section just gives a server score, mainly a quick analysis on how good of a server I was during this two week period. Even though it is multi-factorial when it comes to this job, there is still a correlation between service and tips.
