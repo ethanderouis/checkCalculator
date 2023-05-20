@@ -63,6 +63,24 @@ function payCheckCalculator() {
         +document.querySelector(".soc").innerHTML -
         +document.querySelector(".med").innerHTML
 
-    );
+    ).toFixed(2);
+
+    //  server performance section
+    document.querySelector(".gratuity").innerHTML = (
+
+        +document.querySelector(".total-charge-tips").innerHTML  /
+        +document.querySelector(".total-sales").innerHTML* 100
+
+    ).toFixed(2);
+
+    let gratuity = +document.querySelector(".gratuity").innerHTML;
+
+    if (gratuity > 20) {
+        document.querySelector(".grade").innerHTML = "Excellent";
+    } else if (gratuity < 15) {
+        document.querySelector(".grade").innerHTML = "Poor";
+    } else {
+        document.querySelector(".grade").innerHTML = "Mid";
+    }
 
 }
