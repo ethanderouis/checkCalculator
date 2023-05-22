@@ -1,26 +1,64 @@
 body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #2A363B;
-    background-color: #fecea8;
-}
-
-h1 {
-    text-align: center;
-}
-
-.nav-list {
-    list-style-type: none;
     margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #99b898;
 }
 
-.nav {
-    float: left;
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 1fr 1fr 1fr 1fr;
+
+    gap: 5px;
+
+    padding: 5px;
+    box-sizing: border-box;
+
 }
 
-.nav a {
-    display: block;
-    padding: 8px;    
+.container header {
+    padding: 5px;
+    border: 1px solid #000000;
+    grid-column-start: 1;
+    grid-column-end: 5;
 }
+
+.container #user-input-section {
+    padding: 5px;
+    border: 1px solid #000000;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}
+
+.container #statistics {
+    padding: 5px;
+    border: 1px solid #000000;
+
+    grid-column-start: 3;
+    grid-column-end: 5;
+
+}
+
+.container #paycheck-information {
+    padding: 5px;
+    border: 1px solid #000000;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}
+
+.container #server-performance-score {
+    padding: 5px;
+    border: 1px solid #000000;
+
+    grid-column-start: 3;
+    grid-column-end: 5;
+
+}
+
