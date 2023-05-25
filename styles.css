@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    background-color:black;
+    color: red;
 }
 
 .container {
@@ -20,15 +22,15 @@ body {
 }
 
 .container header {
-    padding: 5px;
-    border: 1px solid #000000;
+    padding: 10px;
+    border: 1px solid red;
     grid-column-start: 1;
     grid-column-end: 5;
 }
 
 .container #user-input-section {
-    padding: 5px;
-    border: 1px solid #000000;
+    padding: 10px;
+    border: 1px solid red;
 
     grid-column-start: 1;
     grid-column-end: 3;
@@ -36,8 +38,8 @@ body {
 }
 
 .container #statistics {
-    padding: 5px;
-    border: 1px solid #000000;
+    padding: 10px;
+    border: 1px solid red;
 
     grid-column-start: 3;
     grid-column-end: 5;
@@ -45,8 +47,8 @@ body {
 }
 
 .container #paycheck-information {
-    padding: 5px;
-    border: 1px solid #000000;
+    padding: 10px;
+    border: 1px solid red;
 
     grid-column-start: 1;
     grid-column-end: 3;
@@ -54,11 +56,31 @@ body {
 }
 
 .container #server-performance-score {
-    padding: 5px;
-    border: 1px solid #000000;
+    padding: 10px;
+    border: 1px solid red;
 
     grid-column-start: 3;
     grid-column-end: 5;
 
+}
+
+.questions-and-push {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div .button {
+    padding: 5% 0;
+}
+
+button {
+    font-size: 15px;
+    padding: 0.5em 1em;
+    margin: 0.10em;
+    border-radius: 1em;
+    border: none;
+    outline: none;
+    background: red;
+    color:black;
 }
 
