@@ -36,8 +36,7 @@ function payCheckCalculator() {
         +document.querySelector(".total-hours").innerHTML*2.13.toFixed(2) +
         +document.querySelector(".total-incentive-tabs").innerHTML +
         +document.querySelector(".total-charge-tips").innerHTML -
-        +document.querySelector(".total-tipshare").innerHTML - 
-        +document.querySelector(".total-tip-refund").innerHTML
+        +document.querySelector(".total-tipshare").innerHTML
         
         
     ).toFixed(2);
