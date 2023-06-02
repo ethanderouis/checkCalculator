@@ -8,7 +8,7 @@ function payCheckCalculator() {
     // Incentive Tabs
     let currentIncentiveTabs = +document.querySelector(".total-incentive-tabs").innerHTML; 
     let addedIncentiveTabs = +document.querySelector('#incentive-tabs-being-added').value;
-    document.querySelector(".total-incentive-tabs").innerHTML = ((currentIncentiveTabs + addedIncentiveTabs)*0.10).toFixed(2);
+    document.querySelector(".total-incentive-tabs").innerHTML = (currentIncentiveTabs + addedIncentiveTabs*0.10).toFixed(2);
 
     // Charge Tips
     let currentChargeTips = +document.querySelector(".total-charge-tips").innerHTML; //  + sign converts these values into numbers in script
